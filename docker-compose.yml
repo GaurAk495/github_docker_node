@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  backend:
+    image: akgaur495/node_docker01:latest
+    ports:
+      - "3000:5123"
+    environment:
+      - PORT=5123
+      - DB_HOST=localhost
+      - DB_PORT=5432
+    volumes:
+      - ./logs:/app/logs
